@@ -1,18 +1,16 @@
-package org.example.backend.user;
+package org.example.backend.users;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import org.example.backend.common.Base_entity;
 
 @Entity
-public class User {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private Long id;
+public class Users extends Base_entity {
 
     private String oauthProvider;
     private String oauthProviderId;
 
+    private Integer balance;
 }
